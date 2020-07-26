@@ -6,7 +6,8 @@ LIBS += -ldl
 
 SOURCES += \
     memory/memoryfunc.cc \
-    memory/memoryhook.cc \
+    memory/memoryhook.cc \ \
+    stltest.cc
 
 HEADERS += \
     memory/memory.h \
