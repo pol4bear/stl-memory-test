@@ -1,0 +1,6 @@
+# C++ executables
+*.exe
+*.o
+
+# Qt creator related files
+*.pro.user
