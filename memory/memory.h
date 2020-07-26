@@ -19,11 +19,6 @@
 #undef new
 #define new my_new
 
-#undef my_delete
-#define my_delete delete(__FILE__, __LINE__)
-#undef delete
-#define delete my_delete
-
 #endif // __cplusplus
 
 #endif // MEMORY_MEMORY_H_

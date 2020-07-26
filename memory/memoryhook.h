@@ -1,5 +1,5 @@
-#ifndef MEMORYHOOK_H
-#define MEMORYHOOK_H
+#ifndef MEMORY_MEMORYHOOK_H
+#define MEMORY_MEMORYHOOK_H
 
 #include <cstddef>
 
@@ -31,4 +31,4 @@ class MemoryHook {
   static MemoryHook &instance();
 };
 
-#endif // MEMORYHOOK_H
+#endif // MEMORY_MEMORYHOOK_H

@@ -74,4 +74,4 @@ void *realloc(void *ptr, sizee_t size) {
   return MemoryHook::instance().realloc_(ptr, size);
 }
 
-#endif
+#endif // MEMORY_GLOBAL_HOOK
