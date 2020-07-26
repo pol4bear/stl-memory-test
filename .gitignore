@@ -1,6 +1,8 @@
 # C++ executables
 *.exe
 *.o
+stltest
+build*
 
 # Qt creator related files
 *.pro.user
