@@ -20,6 +20,9 @@ void *my_realloc(void *ptr, size_t size, const char *file, const int line);
 
 void *operator new (size_t size, const char *file, const int line);
 void *operator new[](size_t size, const char *file, const int line);
+void operator delete(void *ptr, const char *file, const int line);
+void operator delete[](void *ptr, const char *file, const int line);
+
 #endif // __cplusplus
 
 #endif // MEMORY_MEMORYFUNC_H_

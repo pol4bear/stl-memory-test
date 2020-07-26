@@ -14,10 +14,10 @@ class MemoryHook {
   typedef void *(*CallocFunc) (size_t nmemb, size_t size);
   typedef void *(*ReallocFunc)(void  *ptr,   size_t size);
 
-  MallocFunc  malloc_orig_  = nullptr, malloc_  = nullptr;
-  FreeFunc    free_orig_    = nullptr, free_    = nullptr;
-  CallocFunc  calloc_orig_  = nullptr, calloc_  = nullptr;
-  ReallocFunc realloc_orig_ = nullptr, realloc_ = nullptr;
+  MallocFunc  _malloc_orig  = nullptr, _malloc  = nullptr;
+  FreeFunc    _free_orig    = nullptr, _free    = nullptr;
+  CallocFunc  _calloc_orig  = nullptr, _calloc  = nullptr;
+  ReallocFunc _realloc_orig = nullptr, _realloc = nullptr;
 
  public:
   void hook(
