@@ -55,23 +55,3 @@ MemoryHook &MemoryHook::instance() {
   static MemoryHook instance_;
   return instance_;
 }
-
-#ifdef MEMORY_GLOBAL_HOOK
-
-void *malloc(size) {
-  return MemoryHook::instance().malloc_(size);
-}
-
-void free(void *ptr) {
-  MemoryHook::instance().free_(ptr);
-}
-
-void *calloc(size_t nmemb, size_t size) {
-  return MemoryHook::instance().calloc_(nmemb, size);
-}
-
-void *realloc(void *ptr, sizee_t size) {
-  return MemoryHook::instance().realloc_(ptr, size);
-}
-
-#endif // MEMORY_GLOBAL_HOOK
