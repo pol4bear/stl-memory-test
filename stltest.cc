@@ -46,6 +46,7 @@ void map_test(uint count) {
 }
 
 int main() {
+  int *test = new int(0);
   cout << "-------- Vector Test --------\n"; vector_test(CNT);
   cout << "-------- List Test --------\n"; list_test(CNT);
   cout << "-------- Set Test --------\n"; set_test(CNT);
