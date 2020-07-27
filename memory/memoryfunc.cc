@@ -53,7 +53,7 @@ void operator delete[](void *ptr, const char *file, const int line) {
 
 void *operator new (size_t size) {
     void *res = MemoryHook::instance()._malloc(size);
-    fprintf(stdout, "[memory] new(%zu) → %pd\n", size, res);
+    fprintf(stdout, "[memory] new(%zu) → %p\n", size, res);
     return res;
 }
 

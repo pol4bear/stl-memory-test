@@ -5,7 +5,9 @@
 #include "memoryhook.h"
 
 #ifdef __cplusplus
+
 extern "C" {
+
 #endif // __cplusplus
 
 void *my_malloc(size_t size, const char *file, const int line);
@@ -14,6 +16,7 @@ void *my_calloc(size_t nmemb, size_t size, const char *file, const int line);
 void *my_realloc(void *ptr, size_t size, const char *file, const int line);
 
 #ifdef __cplusplus
+
 }
 
 #include <new>
