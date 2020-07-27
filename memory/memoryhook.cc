@@ -4,7 +4,6 @@
 #include "memoryhook.h"
 
 MemoryHook::MemoryHook() {
-  printf("MemoryHook()\n");
   _malloc_orig = _malloc = reinterpret_cast<MallocFunc>(dlsym(RTLD_NEXT, "malloc"));
   if (_malloc_orig == nullptr) {
     fprintf(stderr, "[mem] dlsym(\"malloc\") returned nullptr. dlerror = %s\n", dlerror());

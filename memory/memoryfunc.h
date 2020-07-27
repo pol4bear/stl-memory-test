@@ -20,6 +20,8 @@ void *my_realloc(void *ptr, size_t size, const char *file, const int line);
 
 void *operator new(size_t size, const char *file, const int line);
 void *operator new[](size_t size, const char *file, const int line);
+void operator delete(void *ptr, const char *file, const int line);
+void operator delete[](void *ptr, const char *flie, const int line);
 
 void *operator new(size_t size);
 void *operator new[](size_t size);

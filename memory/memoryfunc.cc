@@ -41,16 +41,26 @@ void *operator new[](size_t size, const char *file, const int line) {
     return res;
 }
 
-void *operator new(size_t size) {
-  void *res = MemoryHook::instance()._malloc(size);
-  fprintf(stdout, "[memory] new(%zu) → %p\n", size, res);
-  return res;
+void operator delete(void *ptr, const char *file, const int line) {
+  MemoryHook::instance()._free(ptr);
+  fprintf(stdout, "[memory] delete(%p) from %s:%d\n", ptr, file, line);
+}
+
+void operator delete[](void *ptr, const char *file, const int line) {
+  MemoryHook::instance()._free(ptr);
+  fprintf(stdout, "[memory] delete(%p) from %s:%d\n", ptr, file, line);
+}
+
+void *operator new (size_t size) {
+    void *res = MemoryHook::instance()._malloc(size);
+    fprintf(stdout, "[memory] new(%zu) → %pd\n", size, res);
+    return res;
 }
 
 void *operator new[](size_t size) {
-  void *res = MemoryHook::instance()._malloc(size);
-  fprintf(stdout, "[memory] new[](%zu) → %p\n", size, res);
-  return res;
+    void *res = MemoryHook::instance()._malloc(size);
+    fprintf(stdout, "[memory] new[](%zu) → %p\n", size, res);
+    return res;
 }
 
 void operator delete(void *ptr) {

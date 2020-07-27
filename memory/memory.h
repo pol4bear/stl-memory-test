@@ -14,10 +14,8 @@
 
 #ifdef __cplusplus
 
-#undef my_new
-#define my_new new(__FILE__, __LINE__)
-#undef new
-#define new my_new
+#define new new(__FILE__, __LINE__)
+#define delete delete(__FILE__, __LINE__)
 
 #endif // __cplusplus
 
